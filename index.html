@@ -1,11 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D</title>
+    <title>Desenvolvimento Web com JS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
+
 <body>
-    
+    <header class="navbar">
+        <!--o problema no codigo e essa div que quando tira funciona o codigo mas se tira vai esta errado provavelmente e a conexão -->
+        <div clas="container navbar-content">
+            <div class="logo">
+
+                <i class="ph-bold ph-alien"></i>
+                <span> Alienzando<span class="highlight">.JS </span></span>
+                <!--span isola um texto do outro numa mesma linha, 
+                 é oque vai deixar o "Alienzando" com uma cor diferente de .JS-->
+
+            </div>
+            <nav class="menu">
+                <!--Crie um link com o nome "módulos"
+                Crie um link com botão com o nome "matricule-se"-->
+                <a href="#cadstro"class="btn-nav">Cadastro</a>
+                <a href="#modulos" class="btn-nav">Matricula-se</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <span class="tag">Matriculas abertas 05/05/5555</span>
+            <h1>Domine o JavaScript do Zero</h1>
+            <p>Aprenda a criar sistemas webs completos sem depender de IA
+                ou formações longas e teóricas.Entenda a base da programação
+                de forma imersiva e totalmente hands-on
+            </p>
+            <div class="hero-buttons">
+                <a href="#cadastro" class="btn btn-primary">Comece Agora</a>
+                <a href="#modulos" class="btn btn-outline">Explore os Conteúdos</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="modulos" class="section-pad">
+        <div class="container">
+            <h2 class="section-titlee">O que você vai aprender</h2>
+            <div class="row">
+                <div class="card">
+                    <div class="icon-box">
+                        <i class="ph-bold ph-desktop"></i>
+                    </div>
+                    <h3>Frontend Moderno</h3>
+                    <p>Crie Interfaces e Formulários que respondem ao usuário.
+                        Domine o HTML5, CSS3 e manipulação de DOM.
+                    </p>
+
+                </div>
+                <div class="card">
+                    <div class="icon-box">
+                        <i class="ph-bold ph-database"></i>
+                    </div>
+                    <h3>Backend & APIs</h3>
+                    <p>Aprenda os principais conceitos, construa a logicado
+                        servidor. banco de dados e regras de negocio com Node.js.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="cadastro" class="section-pad bg-darker">
+        <div class="container form-wrapper">
+            <h2>Garanta sua vaga</h2>
+            <form id="formCadastro"></form>
+            <div class="input-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" placeholder="Seu nome" required>
+            </div>
+            <form id="formCadastro"></form>
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="seu@email.com" required>
+            </div>
+            <form id="formCadastro"></form>
+            <div class="input-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="password" placeholder="Mínimo 8 caracteres" required>
+
+
+                <ul class="validation-list">
+                    <li id="req-length" class="invalid"><i class="ph-bold ph-x-circle"></i>Mínimo 8 caracteres</li>
+                    <li id="req-upper" class="invalid"><i class="ph-bold ph-x-circle"></i>Letra maíuscula</li>
+                    <li id="req-number" class="invalid"><i class="ph-bold ph-x-circle"></i>Um número</li>
+                    <li id="req-special" class="invalid"><i class="ph-bold ph-x-circle"></i>Caractere especial</li>
+                </ul>
+            </div>
+            <button type="submit" id="btn-submit" class="btn btn-full" disabled>Finalizar Cadastro</button>
+            </form>
+        </div>
+
+    </section>
+<footer>
+    <p>&copy; 2026 CodingLabs. Todos os direitos reservados.</p>
+</footer>
+<script src="script.js"></script>
 </body>
+
 </html>
